@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('#open').click(() => {
         $.ajax({
-            url: "http://192.168.1.11/open",
+            url: "http://192.168.0.30/open",
             type: "GET",
             crossDomain: true,
             dataTye: "jsonp",

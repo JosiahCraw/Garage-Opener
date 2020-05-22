@@ -5,13 +5,13 @@
 #define RELAY0 3
 #define RELAY1 1
 
-const char* ssid = "TopShitNet";
-const char* pass = "nosnakesallowed";
+const char* ssid = "crawwireless";
+// const char* pass = "nosnakesallowed";
 
 AsyncWebServer server(80);
 
-IPAddress ip(192, 168, 1, 11);
-IPAddress gateway(192, 168, 1, 1);
+IPAddress ip(192, 168, 0, 30);
+IPAddress gateway(192, 168, 0, 1);
 IPAddress subnet(255, 255, 255, 0);
 
 void setup() {
@@ -24,7 +24,7 @@ void setup() {
   digitalWrite(RELAY1, LOW);
 
   WiFi.config(ip, gateway, subnet, gateway);
-  WiFi.begin(ssid, pass);
+  WiFi.begin(ssid);
 
   while (WiFi.status() != WL_CONNECTED)
   {
