@@ -6,7 +6,6 @@
 #define RELAY1 1
 
 const char* ssid = "crawwireless";
-// const char* pass = "nosnakesallowed";
 
 AsyncWebServer server(80);
 
